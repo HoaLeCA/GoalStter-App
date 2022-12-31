@@ -79,7 +79,14 @@ const loginUser = asyncHandler(async(req, res) => {
 // @router GET/api/users/me
 // @access Public
 const getMe = asyncHandler(async(req, res) => {
-    res.json({message: "User data display"})
+    // req.user.id is setted on middleware by req.user. Therefore, we can get it on here
+    const {_id, name, email} = await User.findById(req.user.id)
+
+    res.status(200).json({
+        id: _id,
+        name,
+        email,
+    })
 })
 
 // Generate token JWT
