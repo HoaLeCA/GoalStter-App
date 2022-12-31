@@ -1,6 +1,6 @@
 const express = require("express")
 const dotenv = require("dotenv")
-const {errorHandler} = require("./middleware/errorMiddelware")
+const {errorHandler} = require("./middleware/errorMiddleware")
 const colors = require("colors")
 const connectDB = require("./config/db")
 dotenv.config()
@@ -15,6 +15,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 app.use("/api/goals", require ("./routers/goalRoutes"))
+app.use("/api/users", require ("./routers/userRoutes"))
 
 app.use(errorHandler)
 
