@@ -42,7 +42,6 @@ function Register() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log('clicked');
 
     //     // check password match
     if (password !== password2) {

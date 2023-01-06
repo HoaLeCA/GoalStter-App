@@ -30,7 +30,7 @@ export const createGoal = createAsyncThunk(
     }
   }
 );
-// Delete goal
+//Delete goal
 
 export const deleteGoal = createAsyncThunk(
   'goals/delete',
