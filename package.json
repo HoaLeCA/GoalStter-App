@@ -1,6 +1,9 @@
 {
   "name": "mern-app",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.12.1"
+  },
   "description": "GoalSetter",
   "main": "server.js",
   "scripts": {
